@@ -1,0 +1,40 @@
+services:
+  neo4j:
+    image: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - D:\CodeLib\GithubCodes\CS4ACNER\data\kg:/var/lib/neo4j/import # 相对路径挂载失败，可以尝试使用绝对路径。修改 docker-compose.yml 文件中的挂载路径为绝对路径：
+      - D:\CodeLib\GithubCodes\CS4ACNER\data\plugins:/var/lib/neo4j/plugins  # 挂载 APOC 插件目录
+      - D:\CodeLib\GithubCodes\CS4ACNER\data\conf:/var/lib/neo4j/conf        # 挂载配置文件目录
+    environment:
+      NEO4J_AUTH: neo4j/newpassword
+#  backend:
+#    build:
+#      context: ./backend
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - neo4j
+#    environment:
+#      - NEO4J_HOST=neo4j
+#      - NEO4J_PORT=7687
+#      - NEO4J_USER=neo4j
+#      - NEO4J_PASSWORD=password
+#
+#  frontend:
+#    build:
+#      context: ./frontend
+#      dockerfile: Dockerfile
+#    ports:
+#      - "3000:3000"
+#
+#  ner:
+#    image: ner-service:v1
+#    ports: ["8001:8000"]
+#
+#  llm-api:
+#    image: llm-gateway:v2
+#    environment:
+#      OPENAI_KEY: ${SECRET_KEY}
