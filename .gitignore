@@ -1,0 +1,6 @@
+frontend/node_modules
+models/ner_model
+tests
+scripts
+docs
+data/raw

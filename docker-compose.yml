@@ -5,11 +5,11 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - D:\CodeLib\GithubCodes\CS4ACNER\data\kg:/var/lib/neo4j/import # 相对路径挂载失败，可以尝试使用绝对路径。修改 docker-compose.yml 文件中的挂载路径为绝对路径：
-      - D:\CodeLib\GithubCodes\CS4ACNER\data\plugins:/var/lib/neo4j/plugins  # 挂载 APOC 插件目录
-      - D:\CodeLib\GithubCodes\CS4ACNER\data\conf:/var/lib/neo4j/conf        # 挂载配置文件目录
+      - /d/CodeLib/GithubCodes/CS4ACNER/data/kg:/var/lib/neo4j/import
+      - /d/CodeLib/GithubCodes/CS4ACNER/data/plugins:/var/lib/neo4j/plugins
+      - /d/CodeLib/GithubCodes/CS4ACNER/data/conf:/var/lib/neo4j/conf
     environment:
-      NEO4J_AUTH: neo4j/newpassword
+      NEO4J_AUTH: neo4j/password
 #  backend:
 #    build:
 #      context: ./backend
