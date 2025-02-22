@@ -1,6 +1,8 @@
-frontend/node_modules
 models/ner_model
 tests
 scripts
 docs
 data/raw
+__pycache__/
+.idea
+/frontend/node_modules/
