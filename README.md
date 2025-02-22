@@ -1,8 +1,8 @@
-#
+# Cs4aCNER
 # 项目计划
 ```mermaid
 gantt
-    title 消融实验执行计划
+    title 项目计划
     dateFormat  YYYY-MM-DD
     section 原型搭建
     NER模块 + KG模块       :active, des1, 2025-02-20, 2d
