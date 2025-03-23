@@ -1,4 +1,6 @@
 # Cs4aCNER
+Classification System for ancient Chinese Named Entity Recognization，这是我毕设的前后端部分
+
 # 项目计划
 ```mermaid
 gantt
